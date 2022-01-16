@@ -1,5 +1,6 @@
 s = "Hello Ruby World"
-s.delete_prefix!("Hello ")
+s.slice! "Hello "
+# s.delete_prefix!("Hello ")
 puts s
 
 s= "Welcome to " + s 
