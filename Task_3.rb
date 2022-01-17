@@ -40,5 +40,18 @@ end
 
 puts "--E--"
 
+s1= "Hi"
+s2= "Welcome"
 
+ if s1[0]!=s2[0] && s1[-1]!=s2[-1] && s1.count("x")==0 && s2.count("x")==0
+    puts true
+ elsif
+    puts false
+ end
 
+ puts "--F--"
+
+ s3= "Welcome"
+ p s3.match?(/a/) || s3.match?(/e/) || s3.match?(/i/) || s3.match?(/o/) || s3.match?(/u/)
+
+ puts "--G--"
