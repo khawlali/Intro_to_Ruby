@@ -51,7 +51,31 @@ s2= "Welcome"
 
  puts "--F--"
 
- s3= "Welcome"
+ s3= "W"
  p s3.match?(/a/) || s3.match?(/e/) || s3.match?(/i/) || s3.match?(/o/) || s3.match?(/u/)
 
  puts "--G--"
+
+ puts "enter a score: "
+ n = gets.to_i
+
+if (0 <= n && n <= 100) 
+    if 0 <= n && n <= 49
+        puts "fail."
+    elsif 50 <= n && n <= 60
+        puts "pass."
+    elsif 60 < n && n <= 70
+        puts "good."
+    elsif 70 < n && n <= 80
+        puts "very good."
+    elsif 80 < n && n <= 90
+        puts "excellent."
+    elsif 90 < n && n <= 100
+        puts "incredible."
+    end
+
+elsif
+    puts "Please insert a score from 0 to 100 "
+end
+
+
