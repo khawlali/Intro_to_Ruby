@@ -67,7 +67,6 @@ class StoreItem
 end 
 
 
-
 class Book < StoreItem
     attr_accessor :auth ,:pages, :isbn
     def initialize(tit = " ", pri = 0,aut = " ",pag = 0 ,isb = 0)
@@ -146,33 +145,6 @@ class Magazine < StoreItem
 end
 
 
-#Add Item (Book or Magazine)
-
-    # puts "chose item to add B for a book, M for a magazine"
-    # kindOfitem = gets.chomp
-    # if kindOfitem == "B"
-    #     book =Book.new()
-    #     puts "Enter book information: Title - Price - Author - Pages - isbn "
-    #     book.title = gets.chomp
-    #     book.price = gets.chomp.to_i
-    #     book.auth = gets.chomp
-    #     book.pages = gets.chomp.to_i
-    #     book.isbn = gets.chomp.to_i
-    #     Book.pushBook(book.title,book.price,book.auth,book.pages,book.isbn)
-
-    # elsif kindOfitem =="M"
-    #     mag =Magazine.new()
-    #     puts "Enter Magazine information: Title - Price - Publisher - Date "
-
-    #     mag.title = gets.chomp
-    #     mag.price = gets.chomp.to_i
-    #     mag.publisher =gets.chomp
-    #     mag.date = gets.chomp.to_i
-        
-    #     Magazine.pushMagazine(mag.title,mag.price,mag.publisher,mag.date)
-      
-    # end
-
 
 
 # Objects data
@@ -197,16 +169,45 @@ magazine2= Magazine.pushMagazine("COVID-19",100,"IEEE","2022")
 
 
 
+## Add Item (Book or Magazine)
+
+    puts "chose item to add B for a book, M for a magazine"
+    kindOfitem = gets.chomp
+    if kindOfitem == "B"
+        book =Book.new()
+        puts "Enter book information: Title - Price - Author - Pages - isbn "
+        book.title = gets.chomp
+        book.price = gets.chomp.to_i
+        book.auth = gets.chomp
+        book.pages = gets.chomp.to_i
+        book.isbn = gets.chomp.to_i
+        Book.pushBook(book.title,book.price,book.auth,book.pages,book.isbn)
+
+    elsif kindOfitem =="M"
+        mag =Magazine.new()
+        puts "Enter Magazine information: Title - Price - Publisher - Date "
+
+        mag.title = gets.chomp
+        mag.price = gets.chomp.to_i
+        mag.publisher =gets.chomp
+        mag.date = gets.chomp.to_i
+        
+        Magazine.pushMagazine(mag.title,mag.price,mag.publisher,mag.date)
+      
+    end
+
+
+
 ## list expensive items
-# StoreItem.expensive()
+StoreItem.expensive()
 
 
 ## books within range
-# puts "Enter the lower price"
-# x = gets.chomp.to_i
-# puts "Enter the higher price"
-# y = gets.chomp.to_i
-# StoreItem.range(x,y)
+puts "Enter the lower price"
+x = gets.chomp.to_i
+puts "Enter the higher price"
+y = gets.chomp.to_i
+StoreItem.range(x,y)
 
 
 ## search Magazine by date
@@ -218,21 +219,21 @@ Magazine.searchDate(w)
 
 ## search Magazine by publisher
 
-# puts "Enter the Publisher Name"
-# z = gets.chomp
-# Magazine.searchPublisher(z)
+puts "Enter the Publisher Name"
+z = gets.chomp
+Magazine.searchPublisher(z)
 
 
 ## list all items
-#print(StoreItem.printList)
+print(StoreItem.printList)
 
 ## delete an item by title
 
-# puts "Enter the title you want to delete"
-# de1 = gets.chomp
+puts "Enter the title you want to delete"
+de1 = gets.chomp
 
-# StoreItem.deleteItem(de1)
+StoreItem.deleteItem(de1)
 
-# print(StoreItem.printList)
+print(StoreItem.printList)
 
 
